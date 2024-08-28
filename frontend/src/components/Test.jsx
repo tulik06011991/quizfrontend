@@ -15,7 +15,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await axios.get('https://quizbackend-2-hz88.onrender.com/test/quiz');
+        const response = await axios.get('https://quizbackend-3-bixu.onrender.com/test/quiz');
         setQuizData(response.data);
         setLoading(false);
       } catch (err) {
@@ -60,7 +60,7 @@ const Quiz = () => {
 
 
     try {
-      const response = await axios.post('https://quizbackend-2-hz88.onrender.com/test/submit', {
+      const response = await axios.post('https://quizbackend-3-bixu.onrender.com/test/submit', {
         userId, // Foydalanuvchi ID
 
         

@@ -16,7 +16,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post('https://quizbackend-2-hz88.onrender.com/auth/register', {
+      const response = await axios.post('https://quizbackend-3-bixu.onrender.com/auth/register', {
         name,
         email,
         password,
