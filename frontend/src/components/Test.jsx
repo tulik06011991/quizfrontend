@@ -15,7 +15,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuiz = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/test/quiz');
+        const response = await axios.get('https://quizbackend-ntmd.onrender.com/test/quiz');
         setQuizData(response.data);
         setLoading(false);
       } catch (err) {
@@ -60,7 +60,7 @@ const Quiz = () => {
 
 
     try {
-      const response = await axios.post('http://localhost:5000/test/submit', {
+      const response = await axios.post('https://quizbackend-ntmd.onrender.com/test/submit', {
         userId, // Foydalanuvchi ID
 
         
