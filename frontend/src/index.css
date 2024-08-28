@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* components/Test.css */
+.quiz-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4c4c;
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.variant-list {
+  list-style: none;
+  padding: 0;
+}
+
+.variant-item {
+  margin-bottom: 10px;
+}
+
+.variant-item label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.variant-item input[type="radio"] {
+  margin-right: 10px;
+}
+
+.time-up-message {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff4c4c;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
