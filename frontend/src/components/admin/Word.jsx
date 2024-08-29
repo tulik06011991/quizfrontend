@@ -28,7 +28,7 @@ const Word = () => {
     formData.append('fan', fan);  // Fan nomini ham yuborish
 
     try {
-      await axios.post('https://quizbackend-3-bixu.onrender.com/api/create', formData, {
+      await axios.post('https://quizbackend-4-sfck.onrender.com/api/create', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

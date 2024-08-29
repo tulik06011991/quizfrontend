@@ -10,7 +10,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://quizbackend-3-bixu.onrender.com/auth/login', { email, password });
+      const response = await axios.post('https://quizbackend-4-sfck.onrender.com/auth/login', { email, password });
 
       if (response.status === 200) {
         const { token, user } = response.data;

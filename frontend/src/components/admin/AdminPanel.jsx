@@ -25,14 +25,14 @@ const AdminPanel = () => {
   useEffect(() => {
     if (activeTab === 'users') {
       axiosInstance
-        .get('https://quizbackend-3-bixu.onrender.com/api/results')
+        .get('https://quizbackend-4-sfck.onrender.com/api/results')
         .then((response) => setUsers(response.data))
         .catch((error) => console.error('Foydalanuvchilarni olishda xatolik:', error));
     }
 
     if (activeTab === 'questions') {
       axiosInstance
-        .get('https://quizbackend-3-bixu.onrender.com/savollar/question')
+        .get('https://quizbackend-4-sfck.onrender.com/savollar/question')
         .then((response) => {
           if (Array.isArray(response.data)) {
             setQuestions(response.data);
@@ -45,7 +45,7 @@ const AdminPanel = () => {
 
     if (activeTab === 'subjects') {
       axiosInstance
-        .get('https://quizbackend-3-bixu.onrender.com/api/fanlar')
+        .get('https://quizbackend-4-sfck.onrender.com/api/fanlar')
         .then((response) => setSubjects(response.data))
         .catch((error) => console.error('Fanlarni olishda xatolik:', error));
     }
@@ -53,7 +53,7 @@ const AdminPanel = () => {
 
   const deleteQuestions = () => {
     axiosInstance
-      .delete('https://quizbackend-3-bixu.onrender.com/deleteAll/delete')
+      .delete('https://quizbackend-4-sfck.onrender.com/deleteAll/delete')
       .then((response) => {
         alert('Savollar va variantlar o\'chirildi');
         setQuestions([]);
@@ -63,7 +63,7 @@ const AdminPanel = () => {
 
   const deleteUser = (Id) => {
     axiosInstance
-      .delete(`https://quizbackend-3-bixu.onrender.com/api/result/${Id}`)
+      .delete(`https://quizbackend-4-sfck.onrender.com/api/result/${Id}`)
       .then((response) => {
         alert('Foydalanuvchi o\'chirildi');
         setUsers(users.filter((user) => user.userId && user.userId._id !== Id));
@@ -81,14 +81,14 @@ const AdminPanel = () => {
     };
 
     axiosInstance
-      .post('https://quizbackend-3-bixu.onrender.com/api/question', newQuestionData)
+      .post('https://quizbackend-4-sfck.onrender.com/api/question', newQuestionData)
       .then((response) => {
         alert('Yangi savol qo\'shildi');
         setShowModal(false);
         setNewQuestion('');
         setNewOptions(['', '', '', '']);
         axiosInstance
-          .get('https://quizbackend-3-bixu.onrender.com/savollar/question')
+          .get('https://quizbackend-4-sfck.onrender.com/savollar/question')
           .then((response) => setQuestions(response.data))
           .catch((error) => console.error('Savollarni olishda xatolik:', error));
       })
@@ -111,14 +111,14 @@ const AdminPanel = () => {
     };
 
     axiosInstance
-      .put(`https://quizbackend-3-bixu.onrender.com/api/question/${currentQuestion._id}`, updatedQuestionData)
+      .put(`https://quizbackend-4-sfck.onrender.com/api/question/${currentQuestion._id}`, updatedQuestionData)
       .then((response) => {
         alert('Savol yangilandi');
         setShowUpdateModal(false);
         setNewQuestion('');
         setNewOptions(['', '', '', '']);
         axiosInstance
-          .get('https://quizbackend-3-bixu.onrender.com/savollar/question')
+          .get('https://quizbackend-4-sfck.onrender.com/savollar/question')
           .then((response) => setQuestions(response.data))
           .catch((error) => console.error('Savollarni olishda xatolik:', error));
       })
